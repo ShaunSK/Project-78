@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    
+    <body>
+        <h1>My Family Book</h1>
+        <br>
+        <img id="img_fam" src="https://i.postimg.cc/5ymDKL83/bro.jpg">
+        <h4 id="fam_mem_name">Shaun</h4>
+        <button onclick="update();">Next</button>
+    </body>
+</html>
+<script>
+    var images = 
+    ["https://i.postimg.cc/5ymDKL83/bro.jpg",
+     "https://i.postimg.cc/bw5W5zSK/mother.jpg",
+     "https://i.postimg.cc/wjMnFtMX/father.jpg"]; 
+
+     var names = ["Shaun", "Milan", "Santhosh"];
+
+     var i=0;
+function update(){
+    i++;
+    var no_of_fam_in_array = 3
+    if(i > no_of_fam_in_array)
+    {
+        i=0;
+    }
+    var updatedImage = images[i];
+    var updatedName = names[i];
+    document.getElementById("img_fam").src = updatedImage;
+    document.getElementById("fam_mem_name").innerHTML = updatedName;
+}
+
+    </script>
